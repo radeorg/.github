@@ -1,1 +1,211 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极效科技动态合伙人协议</title>
+    <style>
+        :root {
+            --primary-color: #2A5CAA;
+            --secondary-color: #38B2AC;
+            --accent-color: #F6AD55;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .clause {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .dynamic-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .dynamic-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        .dynamic-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .attachment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .attachment-card {
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+
+        .attachment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .flowchart {
+            background: #f4f4f4;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .signature-block {
+            display: flex;
+            justify-content: space-around;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+    </style>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-handshake"></i> 极效科技动态合伙人协议</h1>
+        <p>版本号：1.0-动态演进版 | 生效日期：__________</p>
+    </div>
+
+    <section class="clause">
+        <h2><i class="fas fa-dna"></i> 核心原则</h2>
+        <ul>
+            <li>价值锚定：股权比例=历史贡献值×未来潜力系数</li>
+            <li>风险对称：决策权权重=风险承担比例×战略贡献度</li>
+            <li>进化强制：每季度自动触发价值重估</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>股权结构矩阵</h2>
+        <table class="dynamic-table">
+            <!-- 表格内容同前 -->
+        </table>
+    </section>
+
+    <section class="flowchart">
+        <h3>价值评估维度</h3>
+        <img src="placeholder-evaluation-flowchart.png" alt="评估流程图" style="width:100%">
+        <p class="visually-hidden">
+            评估流程说明：季度评估包含贡献值、风险值、战略值三个维度，
+            其中贡献值包含代码/专利产出和商业闭环数，
+            风险值包含现金投入和信用背书，
+            战略值包含战略预判准确率和组织影响力
+        </p>
+    </section>
+
+    <div class="attachment-grid">
+        <div class="attachment-card">
+            <h3><i class="fas fa-file-contract"></i> 附件一：贡献值评估细则</h3>
+            <p>包含23项量化指标和5个评估维度，采用区块链存证技术确保公正性</p>
+            <a href="#download-contract">下载模板</a>
+        </div>
+        
+        <div class="attachment-card">
+            <h3><i class="fas fa-balance-scale"></i> 附件二：战略决策议事规则</h3>
+            <p>详细说明决策委员会运作机制和紧急预案流程</p>
+            <a href="#decision-rules">查看细则</a>
+        </div>
+
+        <div class="attachment-card">
+            <h3><i class="fas fa-calculator"></i> 附件三：动态股权计算器</h3>
+            <p>基于机器学习算法的股权预测工具（Web版/API版）</p>
+            <a href="#calculator">访问工具</a>
+        </div>
+
+        <div class="attachment-card">
+            <h3><i class="fas fa-shield-alt"></i> 附件四：风险共担承诺书</h3>
+            <p>包含3级风险共担方案和2种对冲机制选择</p>
+            <a href="#risk-agreement">签署入口</a>
+        </div>
+    </div>
+
+    <section class="signature-block">
+        <div>
+            <h4>创始人签署</h4>
+            <canvas id="founderSign" width="200" height="100" style="border:1px dashed #ccc"></canvas>
+        </div>
+        <div>
+            <h4>合伙人签署</h4>
+            <canvas id="partnerSign" width="200" height="100" style="border:1px dashed #ccc"></canvas>
+        </div>
+    </section>
+
+    <footer style="text-align:center; margin-top:3rem; color:#666;">
+        <p>本协议采用区块链存证技术 | 每次调整自动生成智能合约</p>
+        <p>法律顾问：_________律师事务所 | 最后更新：__________</p>
+    </footer>
+
+    <!-- 增强交互性 -->
+    <script>
+        // 简单的手写签名功能
+        const initSignature = (canvasId) => {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            let isDrawing = false;
+            
+            canvas.addEventListener('mousedown', start);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', end);
+            
+            function start(e) {
+                isDrawing = true;
+                ctx.beginPath();
+                ctx.moveTo(e.offsetX, e.offsetY);
+            }
+            
+            function draw(e) {
+                if (!isDrawing) return;
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+            
+            function end() {
+                isDrawing = false;
+            }
+        }
+
+        initSignature('founderSign');
+        initSignature('partnerSign');
+    </script>
+</body>
+</html>
