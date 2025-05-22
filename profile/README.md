@@ -101,3 +101,6 @@
 
 ## 📜 **相关协议**
 >> [查看完整协议](https://radeorg.github.io/.github/agreement.html)
+
+<br/>
+<img alt="Activity" src="https://github-readme-activity-graph.vercel.app/graph?username=geeker-lait&theme=github-compact"/>
